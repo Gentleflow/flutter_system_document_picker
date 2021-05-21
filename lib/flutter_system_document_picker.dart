@@ -10,6 +10,8 @@ class FlutterSystemDocumentPicker {
     return _channel.invokeMethod('selectDocument');
   }
 
+  // [formPath] flutter file path
+  // [toPath] selected path
   static Future<bool> saveFile(String formPath, String toPath) {
     return _channel
         .invokeMethod('saveFile', {'formPath': formPath, 'toPath': toPath});
